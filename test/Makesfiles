@@ -1,0 +1,12 @@
+# :vim ft=Makefile
+CC := cc
+CXX := c++
+CXXFLAGS := -g -W -Wall -Werror -Wno-unused-parameter
+
+all: tests
+
+tests: tests.cpp ../Rubidiums.h
+	$(CXX) $(CXXFLAGS) -o $@ $<
+
+clean:
+	- rm tests
